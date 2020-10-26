@@ -9,6 +9,6 @@ Before this I built [quarantineresu.me](https://quarantineresu.me), a site to sh
 
 I have a [YouTube channel](https://youtube.com/c/sreeramvenkitesh) where I post educational content and vlogs and interviews with people from when I went to hackathons and conferences and such events. 
 
-Apart form this, I'm currently pursuing my undergraduate degree in Electronics and Communication Engineering from Mar Athanasius College of Engineering
+Apart from this, I'm currently pursuing my undergraduate degree in Electronics and Communication Engineering from Mar Athanasius College of Engineering
 
 If you're still reading this, you might also be interested to checkout [my projects](/projects) or read [my blog](/post). If you want to stay in touch and get updates of what I'm doing, follow me on [Twitter](https://twitter.com/fillerInk)
