@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fillerInk</title>
+    <style>
+        h3{
+            color:#222831;
+        }
+        a.active{
+            background-color: #e8e8e8;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="https://notion-emojis.s3-us-west-2.amazonaws.com/v0/svg-twitter/1f3b4.svg"/>
+</head>
+<body style="background-color:#fafafa">
+    <br>
+    <div style="position:relative;
+    z-index: 1;
+    min-height:100%;
+    border:2px;
+    background-color:#fafafa;
+    border-color:#fafafa;
+    border-style:solid;
+    min-width: 50px;
+    max-width: 1000px;
+    min-height:820px;
+    margin: 0 auto;
+    padding:25px;
+    display:block;">
+
+        <div class="nav" style="background-color: #fafafa;"> 
+            <div class="nav-left" style="display: flex;">
+                <a href="../index.html"><h3 class="subtitle" style="padding: 10px; margin:0;">fillerInk</h3></a>
+            </div>
+            <div class="nav-right" >
+                <a href="../blog.html" style="margin-top:auto; margin-bottom:auto; height:fit-content;"> Blog </a>
+                <a href="../projects.html" style="margin-top:auto; margin-bottom:auto; height:fit-content;"> Projects </a>
+                <a href="https://twitter.com/fillerInk" style="margin-top:auto; margin-bottom:auto; height:fit-content;" target="_blank"> Tweets </a>
+            </div>
+        </div>
+        <br><br><br>
+
+        <div style="margin:30px;">
+            <h2 class="subtitle" style="color:#666; font-size:40px;">Playing around with the YouTube Data API</h2>
+            <br>
+
+            <p class="code-line" data-line-start=0 data-line-end=1 ><a id="Also_published_in_my_devto_bloghttpsdevtodetahowtousetheyoutubeapitocreateaselfupdatingvideotitlebasedonviews59o8_0"></a>Also published in my <a href="https://dev.to/deta/how-to-use-the-youtube-api-to-create-a-self-updating-video-title-based-on-views-59o8">dev.to blog</a></p>
+<h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="Link_to_my_video_tutorialhttpsyoutubeQwecvVvESVU_2"></a><a href="https://youtu.be/QwecvVvESVU">Link to my video tutorial</a></h2>
+<p class="has-line-data" data-line-start="4" data-line-end="5">You might have seen Tom Scott’s <a href="https://www.youtube.com/watch?v=BxV14h0kFs0">video</a> where he uses the YouTube API to automatically update the title of his video in real time to say ‘This video has n views’. Sometime after, another YouTuber, Mr.Beast did the <a href="https://www.youtube.com/watch?v=YSoJPA8-oHc">same thing</a> with the thumbnail of his video to show how much money he donated.</p>
+<p class="has-line-data" data-line-start="6" data-line-end="7">One of my favourite dev channels, Fireship had posted a <a href="https://www.youtube.com/watch?v=JjXBrJfp5TE&amp;t=257s">video</a> explaining how these people are doing this, explaining how APIs work and how they can be used to automate such tasks.</p>
+<p class="has-line-data" data-line-start="8" data-line-end="9">Although Tom Scott never went into the intricacies of the code behind this process, Fireship explained how to acheive this to a fair degree of detail.</p>
+<p class="has-line-data" data-line-start="10" data-line-end="11">Basically we need to use the YouTube Data API provided by Google to fetch the details of a video. We have two ways to do this</p>
+<ul>
+<li class="has-line-data" data-line-start="11" data-line-end="12">Use an API key to do read-only processes (Like retrieving the number of views)</li>
+<li class="has-line-data" data-line-start="12" data-line-end="14">Use an OAuth 2.0 credential to sign in to your YouTube account and be able to retrieve and update the data.</li>
+</ul>
+<p class="has-line-data" data-line-start="14" data-line-end="15">We would need to use OAuth since we need to update the title of our video.</p>
+<p class="has-line-data" data-line-start="16" data-line-end="17">Fireship’s video, although really well made and interesting to watch, is not a tutorial. You can definitely get a head start but not a walkthrough. But I decided to give it a try nonetheless in the hope to being able to document the process and create a more concise tutorial.</p>
+<h2 class="code-line" data-line-start=19 data-line-end=20 ><a id="Step_1__Using_the_YouTube_Data_API_19"></a>Step 1 - Using the YouTube Data API</h2>
+<p class="has-line-data" data-line-start="21" data-line-end="22"><img width="900" src="https://dev-to-uploads.s3.amazonaws.com/i/nshc69tjtjkw3c23l5ht.png" alt="Alt Text"></p>
+<p class="has-line-data" data-line-start="23" data-line-end="24">The API that we’re gonna use is has an <a href="https://developers.google.com/youtube/v3/docs/?apix=true">extensive documentation</a> along with an in-browser API Explorer that you can use to test an API before actually using it in your project.</p>
+<p class="has-line-data" data-line-start="26" data-line-end="27"><img src="https://dev-to-uploads.s3.amazonaws.com/i/jpdvc3wqz1i2oen5tbgy.png" alt="Alt Text"></p>
+<p class="has-line-data" data-line-start="28" data-line-end="29">This can be really handy to test the API while writing the code. Notice how there are two options for selecting the credentials. If you checked Google OAuth and select a scope within it (different scopes have different access levels), you’ll be prompted to login to your Google account to authenticate the API request. This way the API can make sure that you are requesting to edit the details of a video posted from your account which you have the access to update.</p>
+<p class="has-line-data" data-line-start="30" data-line-end="31">For the title we are going to need the <code>list</code> and the <code>update</code> functions of the API, both of which you can test from the explorer.</p>
+<hr>
+<h2 class="code-line" data-line-start=34 data-line-end=35 ><a id="Step_2__Creating_a_project_with_Deta_34"></a>Step 2 - Creating a project with Deta</h2>
+<p class="has-line-data" data-line-start="36" data-line-end="37">Being able to call the API and change the video title is not enough. You should be able to do this periodically as the views get updated in real time.</p>
+<p class="has-line-data" data-line-start="38" data-line-end="39">Using Deta makes setting up all of this really easy with their <a href="https://docs.deta.sh/docs/micros/about">Micros</a> and <a href="https://docs.deta.sh/docs/micros/cron">Cron</a>. You can write a piece of code, deploy it, set a cron and it will keep running periodically after a time period that you specify.</p>
+<h3 class="code-line" data-line-start=40 data-line-end=41 ><a id="Using_Deta_Micros_and_Crons_to_deploy_your_code_40"></a>Using Deta Micros and Crons to deploy your code</h3>
+<ul>
+<li class="has-line-data" data-line-start="42" data-line-end="44">Create a new Micro</li>
+</ul>
+<p class="has-line-data" data-line-start="44" data-line-end="45">Inside your project directory, run</p>
+<div class="code">
+<pre><code class="has-line-data" data-line-start="46" data-line-end="48">   deta new --node my-project-name</code></pre></div>
+<p class="has-line-data" data-line-start="48" data-line-end="49">This will create a new directory with the name of your project and it will have a <code>.deta</code> folder inside, with all the information regarding your micro. (If you haven’t used Deta before, you’ll need to install the CLI and login from your machine. Check out a tutorial <a href="https://docs.deta.sh/docs/micros/getting_started">here</a>). Once the project is created, you can <code>npm init</code> inside the directory to initialise a node project.</p>
+<ul>
+<li class="has-line-data" data-line-start="50" data-line-end="52">Install the node package for using Google APIs</li>
+</ul>
+<p class="has-line-data" data-line-start="52" data-line-end="53">From your project directory, once you’ve initialised the node project, run</p>
+<div class="code">
+<pre><code class="has-line-data" data-line-start="54" data-line-end="56">   npm install googleapis</code></pre></div>
+<ul>
+<li class="has-line-data" data-line-start="56" data-line-end="58">Using the APIs</li>
+</ul>
+<p class="has-line-data" data-line-start="58" data-line-end="59">Once you have the package installed, you can easily access all of Google’s APIs for say, YouTube or Drive or whatnot.</p>
+<div class="code">
+<pre><code class="has-line-data" data-line-start="61" data-line-end="65">   const google = require('googleapis')
+
+   const youtube = google.youtube('v3')</code></pre></div>
+<p class="has-line-data" data-line-start="65" data-line-end="66">Here v3 represents DataAPI v3 of YouTube.</p>
+<p class="has-line-data" data-line-start="67" data-line-end="68">You can now use the list function to fetch the video details and the update function to update the details of your video.</p>
+<div class="code"><pre><code class="has-line-data" data-line-start="70" data-line-end="84">    youtube.videos.list({
+        auth: auth,
+        id: 'YOUR_VIDEO_ID',
+        part: 'snippet,statistics',
+    },function(err, result) {
+        if (err) {
+        console.log('The API returned an error: ' + err);
+        return;
+        }else{
+        //Do something here with the data
+        console.log(result.data)
+        }
+    })</code></pre></div>
+<p class="has-line-data" data-line-start="85" data-line-end="86">OK, so you might be confused with two things I didn’t talk about yet.</p>
+<p class="has-line-data" data-line-start="87" data-line-end="88">The auth object we pass to the function are our credentials. This will be the API Key if you only need to read the data or it’ll be the access token and refresh token linked to your Google account that has the access to edit the title of the video.</p>
+<p class="has-line-data" data-line-start="89" data-line-end="90">The other arguments for the function are the video ID, which is just the unique string present in the url of every video. The part argument specifies what all types of detail we need to fetch. <code>snippet</code> stands for all the details of the video like the title, categoryId, description, tags etc. <code>statistics</code> is information like the number of views, likes, dislikes and all. Since we need both the title and the view count, we can retrieve both the snippet and statistics of the video.</p>
+<ul>
+<li class="has-line-data" data-line-start="91" data-line-end="93">The Updation</li>
+</ul>
+<p class="has-line-data" data-line-start="93" data-line-end="95">Once you get the details of a video, you can take the view count, create a string saying whatever you want with the view count and send it back to update it as the new title of the video.<br>
+Here’s how we can do it with code</p>
+<div class="code"><pre><code class="has-line-data" data-line-start="96" data-line-end="125">    const video = result.data.items[0]
+        
+    const { viewCount } = video.statistics
+
+    const newTitle = `This video has got ${viewCount} views!`
+
+    video.snippet.title = newTitle
+
+    youtube.videos.update(
+    {
+        auth: auth,    
+        part: &quot;snippet&quot;, //since we only need to update the title
+        resource: {
+        id: 'YOUR_VIDEO_ID',
+        snippet : {
+            &quot;title&quot;: newTitle,   //set title as new title
+            &quot;categoryId&quot;: 'categoryId'   
+        }
+    },(err, response) =&gt; {
+        if (err) {
+        console.log(`There was an error updating ${err}`)
+        return
+        }
+        if (response.data.items) {
+        console.log(&quot;Done&quot;)
+        }
+    }
+    )</code></pre></div>
+<p class="has-line-data" data-line-start="126" data-line-end="127">You can set the new title from the details collected from the <code>list</code> function and use it with the update function. YouTube also wants us to set the Category ID of the video while updating the details. The complete list of category IDs can be found [here] (<a href="https://gist.github.com/dgp/1b24bf2961521bd75d6c">https://gist.github.com/dgp/1b24bf2961521bd75d6c</a>)</p>
+<p class="has-line-data" data-line-start="128" data-line-end="129">The update function can be called from inside the list function if you want to, to directly access the data in the response of the API.</p>
+<hr>
+<h2 class="code-line" data-line-start=132 data-line-end=133 ><a id="The_Google_Developer_Console_132"></a>The Google Developer Console</h2>
+<p class="has-line-data" data-line-start="134" data-line-end="135">Now let’s look at the <code>auth</code> object that we pass in the function calls. <code>auth</code> is an <code>oauth2client</code> object that has our credentials and information like the access token and refresh token and all.</p>
+<p class="has-line-data" data-line-start="136" data-line-end="137">Remember how when using the API explorer Google asked us to select an account and approve all the permissions? We generate access tokens and store it and pass it to our function calls so that we do not need to do this confirmation every single time the function is called. And since we need to update the title in real time, we will need to call the function frequently.</p>
+<ul>
+<li class="has-line-data" data-line-start="138" data-line-end="139">To generate the access tokens, first create a project in your <a href="https://console.cloud.google.com">Google Developer Console</a>.</li>
+<li class="has-line-data" data-line-start="139" data-line-end="140">Add the YouTube Data API v3 to your project from the API library</li>
+<li class="has-line-data" data-line-start="140" data-line-end="141">Go to the credentials tab and create a new <code>OAuth Client ID</code> from the <code>Create Credential</code> menu</li>
+<li class="has-line-data" data-line-start="141" data-line-end="142">You will need to create an OAuth consent screen for this, which you can do easily from the side menu bar in the console.</li>
+<li class="has-line-data" data-line-start="142" data-line-end="144">Once created, download the <code>clien_secret.json</code> file and keep it in yoru project directory. Don’t forget to add it to <code>.gitignore</code> if you are going to push your code to a public repository.</li>
+</ul>
+<hr>
+<p class="has-line-data" data-line-start="146" data-line-end="147">There are a few function that we need to run to generate the access token for the first time. This involves running the code from our local machine and confirming the use of the app we created with our Google account.</p>
+<p class="has-line-data" data-line-start="148" data-line-end="149">For doing this, you can clone the repo I made <a href="https://github.com/fillerInk/this-video-has-x-views">here</a></p>
+<ul>
+<li class="has-line-data" data-line-start="150" data-line-end="151">After cloning, run <code>npm install</code> inside the directory with the <code>package.json</code> file</li>
+<li class="has-line-data" data-line-start="151" data-line-end="152">Copy the <code>client_secret.json</code> file downloaded from your Google Developer Console into the project directory.</li>
+<li class="has-line-data" data-line-start="152" data-line-end="153">Create a new micro inside the cloned project with <code>deta new</code>. This will create a Micro for you based on the existing files. Once created you can go on and run <code>deta deploy</code>, but we’ll wait until everything is done to deploy it.</li>
+<li class="has-line-data" data-line-start="153" data-line-end="154">Run <code>npm start</code> to start the local server on your machine.</li>
+<li class="has-line-data" data-line-start="154" data-line-end="155">You will be given a url in the terminal. Go there and you will get a code in the address bar after you select your Google account and accept the terms. (If it says the app is not trustable, its because we haven’t verified it. Don’t worry, you are the only person who can access the app.)</li>
+<li class="has-line-data" data-line-start="155" data-line-end="156">Paste this code back into your terminal and this will generate a directory named <code>.credentials</code> in your project folder with your access tokens.</li>
+<li class="has-line-data" data-line-start="156" data-line-end="157">Run</li>
+</ul>
+<div class="code">
+<pre><code class="has-line-data" data-line-start="158" data-line-end="160">    deta deploy</code></pre></div>
+<p class="has-line-data" data-line-start="160" data-line-end="161">to deploy your micro</p>
+<ul>
+<li class="has-line-data" data-line-start="162" data-line-end="163">Run</li>
+</ul>
+<div class="code">
+<pre><code class="has-line-data" data-line-start="164" data-line-end="166">    deta cron set '5 minutes'</code></pre></div>
+<p class="has-line-data" data-line-start="166" data-line-end="167">(or however frequent you want the code to run) from the terminal to set the cron</p>
+<hr>
+<p class="has-line-data" data-line-start="170" data-line-end="171">Deta Cron will schedule the running of whatever piece of code you put inside <code>app.lib.cron(event =&gt; { });</code>. You can use it to automate whatever routine tasks that you might have.</p>
+<p class="has-line-data" data-line-start="172" data-line-end="173">This blog post was meant to be a tutorial for a use-case for Deta Cron. Hope this gave you some insight into using Deta in your next project!</p>
+<p class="has-line-data" data-line-start="174" data-line-end="175">Check out my GitHub repo for this project <a href="https://github.com/fillerInk/this-video-has-x-views">here</a></p>
+        
+        </div>
+        
+        <div style="bottom:10px; position:absolute;">
+            <hr>
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>
