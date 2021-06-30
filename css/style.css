@@ -304,9 +304,22 @@ th {
   padding: 20px;
 }
 
+@media screen and (max-width: 1210px) {
+  .content{
+    width:95%;
+    margin: 0 auto;
+  }
+}
 
-.content{
-  width:30%;
-  min-width:300px;
-  margin: 0 auto;
+@media screen and (min-width: 1210px){
+  .content{
+    width:30%;
+    margin: 0 auto;
+  }
+}
+
+.blog-links fieldset {
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
 }
