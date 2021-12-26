@@ -17,8 +17,6 @@ class MyDocument extends Document {
             sizes="16x16"
             href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/man-technologist-light-skin-tone_1f468-1f3fb-200d-1f4bb.png"
           />
-          <link rel="manifest" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/man-technologist-light-skin-tone_1f468-1f3fb-200d-1f4bb.png" />
-          <link rel="mask-icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/man-technologist-light-skin-tone_1f468-1f3fb-200d-1f4bb.png" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
