@@ -20,7 +20,7 @@ const siteMetadata = {
     // supports plausible, simpleAnalytics or googleAnalytics
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
-    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID, // e.g. UA-000000-2 or G-XXXXXXX
+    googleAnalyticsId: "G-8CPGPB3BKD", // e.g. UA-000000-2 or G-XXXXXXX
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo
