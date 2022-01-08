@@ -9,6 +9,6 @@ linkedin: https://www.linkedin.com/in/sreeram-venkitesh
 github: https://github.com/fillerInk
 ---
 
-I'm 22 year old who is passionate about technology and software developement. I find pleasure in learning new things and building projects I care about. Currently I'm working as a Software Engineer at BigBinary.
+I'm 22 year old who is passionate about technology and software developement. I find pleasure in learning new things and building projects I care about. Currently I'm working as a Software Engineer at [BigBinary](https://bigbinary.com).
 
 My interests include reading, meeting people, anime, video games and [amateur astronomy](https://sreeram-venkitesh.github.io/clear-skies). I have a [YouTube channel](https://www.youtube.com/c/sreeramvenkitesh) where I post videos related to technology.

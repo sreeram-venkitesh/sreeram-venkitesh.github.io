@@ -2,7 +2,7 @@ const siteMetadata = {
   title: "Sreeram's Website",
   author: 'Sreeram Venkitesh',
   headerTitle: "Sreeram's Website",
-  description: 'Notes on building your career in software and other stuff I work on',
+  description: 'Notes on software development, productivity and building your career in tech ✨',
   language: 'en-us',
   theme: 'light', // system, dark or light
   siteUrl: 'https://sreeram.xyz',
