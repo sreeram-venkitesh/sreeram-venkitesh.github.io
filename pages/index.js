@@ -19,18 +19,24 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+      <div className="space-y-5 md:space-y-8">
+        <div className="py-10 space-y-2 md:space-y-5">
+          <h1 className='text-3xl md:text-5xl font-bold flex items-center'>
+            Hey!
+            <span><img className='mx-3' style={{minWidth: 40}} width="40" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/waving-hand_medium-light-skin-tone_1f44b-1f3fc_1f3fc.png" alt="" /></span>
+          </h1>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-200">
+            Welcome to my blog where I write about software development, productivity and building your career in
+            tech among other things of interest. I'm currently learning and working with Ruby on Rails and React.js 
+            and I share interesting things that I learn everyday working as a full stack web developer.
           </p>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul className="">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <li key={slug} className="py-12">
+              <li key={slug} className="py-8">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
@@ -40,7 +46,7 @@ export default function Home({ posts }) {
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-3">
+                      <div className="space-y-1">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
@@ -50,7 +56,7 @@ export default function Home({ posts }) {
                               {title}
                             </Link>
                           </h2>
-                          <div className="flex flex-wrap mt-3">
+                          <div className="flex flex-wrap mt-1">
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
                             ))}

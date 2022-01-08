@@ -11,7 +11,7 @@ import ScrollTopAndComment from "@/components/ScrollTopAndComment";
 const editUrl = fileName =>
   `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`;
 const discussUrl = slug =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
+  `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     `${siteMetadata.siteUrl}/blog/${slug}`
   )}`;
 
@@ -65,7 +65,7 @@ export default function PostLayout({
             className="pb-8 divide-y divide-gray-200 dark:divide-gray-700"
             style={{ gridTemplateRows: "auto 1fr" }}
           >
-            <dl className="pt-6 pb-10 text-center">
+            <dl className="pt-4 pb-8 text-center">
               {tags && (
                 <div className="py-1">
                   <div className="flex flex-wrap justify-center">
@@ -84,8 +84,6 @@ export default function PostLayout({
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {"Discuss on Twitter"}
                 </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{"View on GitHub"}</Link>
               </div>
               <Comments frontMatter={frontMatter} />
             </div>
