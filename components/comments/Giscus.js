@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes'
 import siteMetadata from '@/data/siteMetadata'
 
 const Giscus = ({ mapping }) => {
-  const [enableLoadComments, setEnabledLoadComments] = useState(true)
+  // const [enableLoadComments, setEnabledLoadComments] = useState(true)
   const { theme, resolvedTheme } = useTheme()
   const commentsTheme =
     siteMetadata.comment.giscusConfig.themeURL === ''
@@ -16,7 +16,7 @@ const Giscus = ({ mapping }) => {
   const COMMENTS_ID = 'comments-container'
 
   const LoadComments = useCallback(() => {
-    setEnabledLoadComments(false)
+    // setEnabledLoadComments(false)
     const script = document.createElement('script')
     script.src = 'https://giscus.app/client.js'
     script.setAttribute('data-repo', siteMetadata.comment.giscusConfig.repo)
@@ -46,9 +46,13 @@ const Giscus = ({ mapping }) => {
     LoadComments()
   }, [LoadComments])
 
+  useEffect(() => {
+    LoadComments();
+  }, [])
+
   return (
     <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
-      {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
+      {/* {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>} */}
       <div className="giscus" id={COMMENTS_ID} />
     </div>
   )

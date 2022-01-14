@@ -6,7 +6,7 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'light', // system, dark or light
   siteUrl: 'https://sreeram.xyz',
-  siteRepo: 'https://github.com/sreeram-venkites/sreeram-venkitesh.github.io',
+  siteRepo: 'https://github.com/sreeram-venkitesh/sreeram-venkitesh.github.io',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
