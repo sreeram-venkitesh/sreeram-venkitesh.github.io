@@ -24,9 +24,6 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={twImage} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content="/static/images/banner.png" />        
     </Head>
   )
 }
