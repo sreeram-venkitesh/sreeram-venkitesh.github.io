@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/sreeram-venkitesh/sreeram-venkitesh.github.io',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/sreeram_cropped.jpg',
-  socialBanner: '/static/images/',
+  socialBanner: '/static/images/banner.png',
   email: 'sreeramvenkitesh@gmail.com',
   github: 'https://github.com/sreeram-venkitesh',
   twitter: 'https://twitter.com/fillerInk',
