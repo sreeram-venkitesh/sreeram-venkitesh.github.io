@@ -7,6 +7,7 @@ import Tag from "@/components/Tag";
 import siteMetadata from "@/data/siteMetadata";
 import Comments from "@/components/comments";
 import ScrollTopAndComment from "@/components/ScrollTopAndComment";
+import {useState} from "react";
 
 const editUrl = fileName =>
   `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`;
@@ -26,11 +27,14 @@ export default function PostLayout({
   frontMatter,
   authorDetails,
   next,
+  toc,
   prev,
   children,
 }) {
-  const { slug, fileName, date, title, tags } = frontMatter;
+  const { slug, fileName, date, title, tags, readingTime } = frontMatter;
+  const [contents,setContents] = useState(true);
 
+  const headerClassName = toc.length > 0 ? "pb-8" : "pb-8 divide-y divide-gray-200 dark:divide-gray-700"
   return (
     <SectionContainer>
       <BlogSEO
@@ -62,12 +66,15 @@ export default function PostLayout({
             </div>
           </header>
           <div
-            className="pb-8 divide-y divide-gray-200 dark:divide-gray-700"
+            className={headerClassName}
             style={{ gridTemplateRows: "auto 1fr" }}
           >
-            <dl className="pt-4 pb-8 text-center">
+            <dl className="pb-3 text-center">
+              <div className="text-center pt-3 text-gray-400">
+              {readingTime.words} words &bull; {readingTime.text} 
+              </div>
               {tags && (
-                <div className="py-1">
+                <div className="py-3">
                   <div className="flex flex-wrap justify-center">
                     {tags.map(tag => (
                       <Tag key={tag} text={tag} />
@@ -75,6 +82,20 @@ export default function PostLayout({
                   </div>
                 </div>
               )}
+              { 
+                toc.length > 0 && 
+                <div className="my-3 px-10 w-1/2 border mx-auto border-gray-200 dark:border-gray-700 prose dark:prose-dark max-w-none text-center">
+                  <div className="flex items-center justify-center space-x-2">
+                    <p className="font-bold">Contents</p>
+                    <a onClick={() => setContents(!contents)}>[{contents ? "Hide" : "Show"}]</a>
+                  </div>
+                  { contents &&
+                    <div className="pb-5">
+                      <ol className="text-left">{toc.map(item => <li><a href={item.url}>{item.value}</a></li>)}</ol>
+                    </div>
+                  }
+                </div>
+              }
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none xl:px-36">

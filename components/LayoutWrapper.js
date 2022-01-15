@@ -12,7 +12,7 @@ const LayoutWrapper = ({ children }) => {
       <div className="flex flex-col justify-between h-screen">
         <header className="flex items-center justify-between py-10">
           <div>
-            <Link href="/" aria-label="Sreeram's Website">
+            <Link href="/" aria-label="Sreeram Venkitesh">
               <div className="flex items-center justify-between">
                 <div className="mr-3 text-4xl">
                   <img style={{minWidth: 40}} width="40" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/technologist-light-skin-tone_1f9d1-1f3fb-200d-1f4bb.png" alt="Icon" />

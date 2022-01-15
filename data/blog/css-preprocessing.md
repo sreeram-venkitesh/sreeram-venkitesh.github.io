@@ -12,18 +12,6 @@ In this article, we will see how we can add TailwindCSS to a barebones React pro
 
 Before we dive into the specifics of working on a React project, let us look into some of these terms in more detail.
 
----
-
-## Table of Contents
-
-### 1. [CSS Preprocessors](#css-preprocessors)
-
-### 2. [PostCSS](#postcss)
-
-### 3. [TailwindCSS as a PostCSS plugin](#tailwindcss-as-a-postcss-plugin)
- 
----
-
 ### CSS Preprocessors
 
 CSS preprocessors are programs that lets us create CSS code by writing code in the preprocessor's own syntax. Why would we want to use a preprocessor than writing our own CSS code then? It is because these preprocessors can add new syntax that is not available in regular CSS, which can make writing and maintaining code much easier for us. Let's see an example for this. 
