@@ -1,6 +1,6 @@
 ---
 title: "Using services in your Rails projects"
-summary: "Services can be powerful tools to optimize your code make your life easier."
+summary: "Services can be powerful tools to optimize your code make your life easier"
 tags: ["ruby on rails","software engineering"]
 draft: false
 date: "2022-01-08"

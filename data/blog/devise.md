@@ -1,7 +1,7 @@
 ---
-title: "How to use devise for user authentication in Rails applications"
-summary: "A quick guide to setup user authentication in your Rails app using Devise"
-tags: ["ruby on rails","software engineering"]
+title: "Using devise for user authentication in Rails"
+summary: "A quick guide to setup user authentication in your Rails applications using Devise"
+tags: ["ruby on rails","devise","software engineering"]
 draft: false 
 date: "2022-01-14"
 ---

@@ -3,7 +3,7 @@ title: "Errors, the ultimate architect of everything"
 date: "2019-01-12"
 tags: ["rant"]
 draft: false
-summary: "A random shower thought about code, evolution and the mistakes we make"
+summary: "A random shower thought about code, evolution and the mistakes we make in our lives"
 ---
 
 I was programming the other day, and quite like every other day, stumbled into some errors. I tried to fix them and run it again, only to realize that I have run into some other errors now. I was feeling frustrated and closed my laptop. After starting work on this project around 3 months ago, there is this little exercise that I do whenever I jump into an endless loop of compilation mistakes and other frequent crashes — I look back at all that I have done up until now. There were plenty of instances where I had thought that I won’t be able to crack this one, and would have to give it up for the other, more experienced members of the team, but finally ended up solving them myself. There has been no hurdle which I faced, that I couldn’t solve by myself. Some of them took a day, some other took weeks, but I had resolved every one of them in the end.
