@@ -80,4 +80,4 @@ With this, you will have a very basic application where users can sign up and ma
 
 As a final exercise, I'd highly recommend you go through the [devise GitHub repository](https://github.com/heartcombo/devise/) and study the readme file to get a better understanding of devise and also read about all the helpers and methods we haven't discussed in these posts.
 
-[Next up in this series of posts about Rails, we will look into how we can deploy the sample application we just made.](/blog/rails-deployment)
+If you're interested in learning more about deploying your Rails application, check out the [Rails in Production](/blog/rails-in-production) series of posts to delve into the devops side of Rails.
