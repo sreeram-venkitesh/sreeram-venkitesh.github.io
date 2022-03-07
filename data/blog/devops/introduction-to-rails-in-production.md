@@ -19,3 +19,9 @@ Talking about deploying to your own servers, you can either build your own homel
 Now that you have a better idea of the differences between using a platform like Heroku versus configuring your own servers, we will go deeper and get more technical, like how to automate the provisioning of a server and its initial setup using Ansible, how to automate the deployment process of a Rails application using deployment tools like Capistrano, how to manage multi-server deployments where you have to deploy the same application in different server with different environments like staging, production etc. and how you can bring all of this together. 
 
 This series of posts will be divided into different sections based on a topic. There will also be longer tutorial-like posts and smaller posts going over specific tidbits of information about more obscure things you might encounter while working. You can follow these posts in any order depending on your requirement, but if you are following along to learn from scratch, I'd suggest following the given order.
+
+---
+
+**Further Reading**
+
+- [Why do people use Heroku when AWS is present?](https://stackoverflow.com/questions/9802259/why-do-people-use-heroku-when-aws-is-present-what-distinguishes-heroku-from-aws)
