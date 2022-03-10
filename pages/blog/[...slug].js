@@ -57,12 +57,23 @@ export default function Blog({ post, authorDetails, prev, next }) {
         />
       ) : (
         <div className="mt-24 text-center">
-          <PageTitle>
-            Under Construction{' '}
-            <span role="img" aria-label="roadwork sign">
+          <div className="space-y-6 md:mt-10">
+          <img
+            className="w-11/12 md:w-1/2 mx-auto"
+            src="https://media.giphy.com/media/l3E6KC64glestQ7Sw/giphy.gif"
+          />
+          <div className="space-y-2">
+          <h1 className="text-4xl text-center font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:leading-14 md:px-6">
+            Under construction
+            <span role="img" aria-label="roadwork sign" className='mx-5'>
               🚧
             </span>
-          </PageTitle>
+          </h1>
+          <p className="mb-4 text-center text-xl font-bold leading-normal md:text-2xl">
+            Sorry we are still working on this one!
+          </p>
+          </div>
+        </div>
         </div>
       )}
     </>

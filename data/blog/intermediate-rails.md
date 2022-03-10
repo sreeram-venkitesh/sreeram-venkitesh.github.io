@@ -1,7 +1,7 @@
 ---
 title: "Intermediate Rails"
 summary: "What  to learn after you've got your basics down"
-tags: ["ruby-on-rails","software-engineering"]
+tags: ["ruby-on-rails","software-engineering","series" ]
 draft: false
 date: "2022-02-04"
 ---

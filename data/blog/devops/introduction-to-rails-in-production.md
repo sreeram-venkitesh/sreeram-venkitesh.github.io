@@ -1,9 +1,9 @@
 ---
-title: "Introduction to Rails in production"
-summary: "An overview of different ways to deploy your Rails apps"
+title: "Different ways to deploy your Rails application"
+summary: "Introduction to the Rails in Production series of posts"
 tags: ["ruby-on-rails","software-engineering","devops"]
 draft: false
-date: "2022-03-07"
+date: "2022-03-03"
 ---
 
 This post is a part of the [Rails in Production](/blog/rails-in-production) series and aims to give a general introduction about devops with Rails. This post assumes that you have a basic working knowledge of how a Rails application works.
