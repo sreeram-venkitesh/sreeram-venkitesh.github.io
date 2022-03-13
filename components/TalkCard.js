@@ -39,7 +39,7 @@ const TalkCard = ({
         <p className="mb-1 prose text-gray-800 max-w-none dark:text-gray-400">
           {place}
         </p>
-        <a className="mr-3 text-sm font-medium text-gray-600 bg-red-100 dark:bg-gray-900 px-2 py-1 rounded hover:text-gray-900 dark:text-primary-500 dark:hover:text-primary-400">
+        <a className="mr-3 text-sm font-medium text-gray-600 bg-blue-100 dark:bg-gray-900 px-2 py-1 rounded hover:text-gray-900 dark:text-primary-500 dark:hover:text-primary-400">
           {type.split(" ").join("-")}
         </a>
         <p className="mt-6 prose text-gray-500 max-w-none dark:text-gray-400">
@@ -49,7 +49,7 @@ const TalkCard = ({
           {link && (
             <Link
               href={link}
-              className="text-base font-medium leading-6 text-red-400 dark:text-primary-500 hover:text-red-600 dark:hover:text-primary-400"
+              className="text-base font-medium leading-6 text-blue-400 dark:text-primary-500 hover:text-blue-600 dark:hover:text-primary-400"
               aria-label={`Link to ${name}`}
             >
               More details &rarr;
@@ -58,7 +58,7 @@ const TalkCard = ({
           {video && (
             <Link
               href={video}
-              className="text-base font-medium leading-6 text-red-400 dark:text-primary-500 hover:text-red-600 dark:hover:text-primary-400"
+              className="text-base font-medium leading-6 text-blue-400 dark:text-primary-500 hover:text-blue-600 dark:hover:text-primary-400"
               aria-label={`Video of ${name}`}
             >
               Video &rarr;

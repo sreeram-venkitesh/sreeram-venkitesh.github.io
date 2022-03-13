@@ -41,7 +41,7 @@ const Card = ({ title, description, imgSrc, github, demo, blog }) => (
           {github && (
             <Link
               href={github}
-              className="text-base font-medium leading-6 text-red-400 dark:text-primary-500 hover:text-red-600 dark:hover:text-primary-400"
+              className="text-base font-medium leading-6 text-blue-400 dark:text-primary-500 hover:text-blue-600 dark:hover:text-primary-400"
               aria-label={`Link to ${title}`}
             >
               GitHub
@@ -50,7 +50,7 @@ const Card = ({ title, description, imgSrc, github, demo, blog }) => (
           {demo && (
             <Link
               href={demo}
-              className="text-base font-medium leading-6 text-red-400 dark:text-primary-500 hover:text-red-600 dark:hover:text-primary-400"
+              className="text-base font-medium leading-6 text-blue-400 dark:text-primary-500 hover:text-blue-600 dark:hover:text-primary-400"
               aria-label={`Link to ${title}`}
             >
               Website
@@ -59,7 +59,7 @@ const Card = ({ title, description, imgSrc, github, demo, blog }) => (
           {blog && (
             <Link
               href={blog}
-              className="text-base font-medium leading-6 text-red-400 dark:text-primary-500 hover:text-red-600 dark:hover:text-primary-400"
+              className="text-base font-medium leading-6 text-blue-400 dark:text-primary-500 hover:text-blue-600 dark:hover:text-primary-400"
               aria-label={`Link to ${title}`}
             >
               Blog
