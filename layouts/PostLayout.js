@@ -98,7 +98,7 @@ export default function PostLayout({
               }
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none xl:px-36">
+              <div className="pt-10 text-justify pb-8 prose dark:prose-dark max-w-none xl:px-36">
                 {children}
               </div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
