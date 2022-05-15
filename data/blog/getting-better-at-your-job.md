@@ -1,5 +1,5 @@
 ---
-title: "What it means to be good at your Software Engineering Job"
+title: "What it means to be good at your software engineering job"
 date: "2022-03-05"
 tags: ["rant","career"]
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Tips for finding yourself a software job"
+title: "Tips for finding yourself a good software job"
 summary: "Things I learnt about job hunting during the Covid 19 lockdown when I taught myself web development and landed an internship"
 tags: ["software engineering","career"]
 draft: false
