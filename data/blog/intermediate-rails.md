@@ -13,4 +13,8 @@ __Intermediate Rails__ is a compilation of some of the other blog posts I've mad
 
 - [Using services in your Rails projects](/blog/intermediate-rails/rails-services)
 
+### User Authentication
 
+- [Using devise for user authentication in Rails](/blog/devise)
+
+- [Making a simple blog application in Rails with Devise](/blog/devise-blog)
