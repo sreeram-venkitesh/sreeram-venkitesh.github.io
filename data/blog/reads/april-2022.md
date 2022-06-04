@@ -1,6 +1,6 @@
 ---
 title: "What I'm reading - April 2022"
-summary: "What "
+summary: ""
 tags: ["what I read"]
 draft: false 
 date: "2022-05-7"
