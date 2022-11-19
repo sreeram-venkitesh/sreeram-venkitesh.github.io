@@ -20,7 +20,7 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="space-y-5 md:space-y-8 text-zinc-800 dark:text-zinc-300" >
-        <div className="py-10 px-20 space-y-2 md:space-y-5">
+        <div className="py-10 px-5 md:px-20 space-y-2 md:space-y-5">
           <p className="text-lg">
             Hey! 👋🏼
           </p>
@@ -36,15 +36,14 @@ export default function Home({ posts }) {
             play around with it.
           </p>
           <div className='text-center'>
-            <p className='text-lg leading-7'>
+            <p className='text-lg leading-7 mt-5'>
               <span className='underline text-sky-600 font-semibold dark:text-sky-200'>
                 <a href="https://sreeramv.neetocal.com/calendar/neetoreview-demo-devopsdays-india-2022">
                   Schedule a meeting
                 </a>
               </span>
             </p>
-            <br />
-            <p className='mt-3'>More info</p>
+            <p className='mt-5'>More about us</p>
             <div className='space-x-4 flex justify-center items-center mt-3'>
               <p className='text-lg leading-7'>
                 <span className='underline text-sky-600 font-semibold dark:text-sky-200'>
