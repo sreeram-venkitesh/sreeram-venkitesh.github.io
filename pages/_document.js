@@ -4,18 +4,18 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="apple-touch-icon" sizes="76x76" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/man-technologist-light-skin-tone_1f468-1f3fb-200d-1f4bb.png" />
+          <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/technologist.png" />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/man-technologist-light-skin-tone_1f468-1f3fb-200d-1f4bb.png"
+            href="/static/favicons/technologist.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/man-technologist-light-skin-tone_1f468-1f3fb-200d-1f4bb.png"
+            href="/static/favicons/technologist.png"
           />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" content="#000000" />
