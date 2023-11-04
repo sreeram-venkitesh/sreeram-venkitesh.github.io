@@ -1,7 +1,7 @@
 ---
 title: How I'm "dogfooding" neetoDeploy
 summary: How I'm building and using neetoDeploy
-draft: false
+draft: true
 date: 2023-06-07T00:00:00.000Z
 tags:
   - neetoDeploy
