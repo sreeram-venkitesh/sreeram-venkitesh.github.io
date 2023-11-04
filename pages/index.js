@@ -27,7 +27,7 @@ export default function Home({ posts }) {
           <p className="text-lg leading-7 text-justify">
             I'm Sreeram, a software developer from Kerala, India's beautiful west coast. This is my personal website, 
             where I share my notes and writings about things I'm interested in.
-            Think of this as a <span><a href="https://joelhooks.com/digital-garden" className='underline'>digtial garden</a></span> where I plant seeds, grow ideas and curate my notes.
+            Think of this as a <span><a href="https://joelhooks.com/digital-garden" className='underline' target="_blank">digtial garden</a></span> where I plant seeds, grow ideas and curate my notes.
           </p>
           <br />
           <p className='text-lg leading-7 font-semibold'>Some personal favourites</p>
@@ -39,7 +39,7 @@ export default function Home({ posts }) {
             </li>
             <li>
               <a href="/blog/errors" className='text-lg underline'>
-                Errors, the ultimate architect of everything
+                Errors, the architect of life
               </a>
             </li>
             <li>

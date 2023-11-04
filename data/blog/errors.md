@@ -1,5 +1,5 @@
 ---
-title: "Errors, the ultimate architect of everything"
+title: "Errors, the architect of life"
 date: "2019-01-12"
 tags: ["rant"]
 draft: false
