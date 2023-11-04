@@ -4,7 +4,7 @@ const siteMetadata = {
   headerTitle: "Sreeram Venkitesh",
   description: 'Notes on software development, productivity and building your career in tech ✨',
   language: 'en-us',
-  theme: 'light', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://sreeram.xyz',
   siteRepo: 'https://github.com/sreeram-venkitesh/sreeram-venkitesh.github.io',
   siteLogo: '/static/images/logo.png',
