@@ -1,6 +1,6 @@
 ---
 name: Sreeram Venkitesh
-avatar: /static/images/sreeram_talk.jpg
+avatar: /static/images/sreeram_talk.JPG
 occupation: Software Engineer
 company: BigBinary
 email: sreeramvenkitesh@gmail.com
