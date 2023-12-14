@@ -1,2 +1,2 @@
 release: yarn -v
-web: tinacms build && next build
+web: yarn build
