@@ -18,7 +18,7 @@ const LayoutWrapper = ({ children }) => {
                   <img style={{minWidth: 40}} width="40" src="/static/favicons/technologist.png" alt="Icon" />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-8 text-2xl text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-red-400 dark:from-violet-400 dark:to-red-500 font-semibold sm:block">
+                  <div className="hidden h-8 text-2xl text-transparent bg-clip-text bg-gradient-to-br from-violet-800 to-red-500 dark:from-violet-400 dark:to-red-500 font-semibold sm:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (

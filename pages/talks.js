@@ -13,14 +13,13 @@ export default function Talks() {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Talks & Workshops
+            Talks           
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            I have talked at a couple of conferences in the past few years. I
-            like to share and talk about things I've learnt through conference
-            talk sessions and workshops.
+          <p className="text-lg pt-3 leading-7 text-gray-800 dark:text-gray-600">
+            I like to talk at technical conferences and I've given a couple of talks about devops, Kubernetes and platform engineering. 
+            If you want me to speak at your event about any of these topics, you can reach out to me <a className="underline text-primary-500" href="/about">here.</a>
           </p>
-          <div className="container py-12">
+          <div className="container py-8 px-2">
             <div className="flex flex-wrap -m-4">
               {talksData.map(d => (
                 <TalkCard
