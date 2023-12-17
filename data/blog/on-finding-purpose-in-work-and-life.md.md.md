@@ -2,11 +2,12 @@
 title: On Finding Purpose in Work and Life
 summary: A retrospect of the year 2023
 draft: true
-date: '2023-12-14T18:30:00.000Z'
+date: 2023-12-14T18:30:00.000Z
 tags:
   - rant
 ---
 
+[Wiliam Shanks](https://en.wikipedia.org/wiki/William_Shanks) was an amateur Mathematician
 
 2023 has been the first year of my life where I was working on a single project throughout the entirety of the year. As some of you reading this might know, that project is [neetoDeploy](https://neeto.com/neetodeploy), the cloud deployment platform as a service we're building at BigBinary.
 
