@@ -1,7 +1,7 @@
 ---
 title: "What it means to be good at your software engineering job"
 date: "2022-03-05"
-tags: ["rant","career"]
+tags: ["rant","career", "favourite"]
 draft: false
 summary: "Retrospect after 9 months working full time as a software engineer"
 ---

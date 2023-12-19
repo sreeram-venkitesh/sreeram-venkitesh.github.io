@@ -76,7 +76,7 @@ export default function PostLayout({
               {tags && (
                 <div className="py-3">
                   <div className="flex flex-wrap justify-center">
-                    {tags.map(tag => (
+                    {tags.filter(item => item !== "favourite").map(tag => (
                       <Tag key={tag} text={tag} />
                     ))}
                   </div>

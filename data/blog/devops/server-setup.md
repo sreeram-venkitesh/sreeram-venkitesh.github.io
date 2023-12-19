@@ -1,7 +1,7 @@
 ---
 title: "Initial server setup with Ubuntu 20.04 for deploying your Rails project"
 summary: ""
-tags: ["software-engineering","devops","unix"]
+tags: ["software-engineering","devops","unix", "ruby-on-rails"]
 draft: false
 date: "2022-03-04"
 ---

@@ -2,7 +2,7 @@
 title: "What I'm reading - August 2022"
 summary: ""
 tags: ["what I read"]
-draft: false 
+draft: true 
 date: "2022-09-3"
 ---
 

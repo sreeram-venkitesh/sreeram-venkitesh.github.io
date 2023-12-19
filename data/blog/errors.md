@@ -1,7 +1,7 @@
 ---
 title: "Errors, the architect of life"
 date: "2019-01-12"
-tags: ["rant"]
+tags: ["rant", "favourite"]
 draft: false
 summary: "A random shower thought about code, evolution and the mistakes we make in our lives"
 ---

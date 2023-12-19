@@ -1,7 +1,7 @@
 ---
 title: "How I manage my bookmarks productively"
 summary: "The mental framework I use to store and organize my bookmarks in Google Chrome"
-tags: ["productivity"]
+tags: ["productivity", "favourite"]
 draft: false 
 date: "2021-12-1"
 ---

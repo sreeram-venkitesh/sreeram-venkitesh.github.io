@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
 import NewsletterForm from '@/components/NewsletterForm'
+import { $0 } from 'prettier'
 
 const MAX_DISPLAY = 5
 
@@ -17,26 +18,34 @@ export async function getStaticProps() {
 
 export default function Home({ posts }) {
 
+
+  console.log(posts)
+
   const personalFavs = [
     {
       title: "What it means to be good at your software engineering job",
-      link: "/blog/getting-better-at-your-job" 
+      link: "/blog/getting-better-at-your-job" ,
+      "date": "Mar 2022"
     },
     {
       title: "Errors, the architect of life",
-      link: "/blog/errors"
+      link: "/blog/errors",
+      date: "Jan 2019"
     },
     {
       title: "How I manage my bookmarks productively",
-      link: "/blog/bookmarks"
+      link: "/blog/bookmarks",
+      date: "Dec 2021"
     },
-    {
-      title: " Building frameworks of thought",
-      link: "/blog/frameworks-of-thought"
-    },
+    // {
+    //   title: " Building frameworks of thought",
+    //   link: "/blog/frameworks-of-thought",
+    //   date: ""
+    // },
     {
       title: "Tips for finding yourself a good software job",
-      link: "/blog/finding-software-job"
+      link: "/blog/finding-software-job",
+      date: "July 2021"
     },
   ]
 
@@ -57,8 +66,17 @@ export default function Home({ posts }) {
       title: "How to deploy your Rails app using Capistrano",
       link: "blog/devops/rails-capistrano"
     },
-
   ]
+
+  const formatDate = (date, isDayPresent = true) => {
+    const options = { year: 'numeric', month: 'short' };
+    if(isDayPresent){
+      options.day = "numeric";
+    }
+    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(new Date(date)).split(',').join('');
+    return formattedDate;
+  }
+
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
@@ -72,37 +90,62 @@ export default function Home({ posts }) {
           <br />
 
           <div className='space-y-10'>
-          {/* Personal Favourites */}
+
+          {/* Most recent 10 posts */}
           <div className='space-y-3'>            
-            <p className='text-lg leading-7 font-semibold'>Some personal favourites</p>
-            <ul className='list-disc px-10 leading-8'>
+            <p className='text-lg leading-7 font-semibold'>Recent posts</p>
+            <table className='px-10 leading-8'>
+              <tbody>
               {
-                personalFavs.map(item => (
-                <li>
-                  <a href={item.link} className='text-lg'>
-                    {item.title}
-                  </a>
-                </li>
+                posts.slice(0,10).map(item => (
+                <tr className='w-full text-xs md:text-lg'>
+                  <td className='w-1/6 text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date)}</a></td>
+                  <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
+                </tr>
                 ))
               }
-            </ul>
+              </tbody>
+            </table>
+          </div>
+
+         
+
+          {/* Rails Devops */}
+          <div className='space-y-3'>            
+            <p className='text-lg leading-7 font-semibold'>Personal Favourites</p>
+            <table className='px-10 leading-8'>
+              <tbody>
+              {
+                posts.filter(item => item.tags.includes('favourite')).slice(0,10).map(item => (
+                <tr className='w-full text-xs md:text-lg'>
+                  <td className='w-1/6 text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date, false)}</a></td>
+                  <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
+                </tr>
+                ))
+              }
+              </tbody>
+            </table>
           </div>
 
           {/* Rails Devops */}
-          <div className='space-y-3'>
-            <p className='text-lg leading-7 font-semibold'>DevOps for Ruby on Rails</p>
-            <ul className='list-disc mt-0 px-10 leading-8'>
+          <div className='space-y-3'>            
+            <p className='text-lg leading-7 font-semibold'>Devops for Ruby on Rails</p>
+            <table className='px-10 leading-8'>
+              <tbody>
               {
-                railsDevops.map(item => (
-                <li>
-                  <a href={item.link} className='text-lg'>
-                    {item.title}
-                  </a>
-                </li>
+                posts.filter(item => item.tags.includes('devops') && item.tags.includes('ruby-on-rails')).slice(0,10).map(item => (
+                <tr className='w-full text-xs md:text-lg'>
+                  <td className='w-1/6 text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date, false)}</a></td>
+                  <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
+                </tr>
                 ))
               }
-            </ul> 
+              </tbody>
+            </table>
           </div>
+
+
+          
           </div>
         </div>
       </div>
