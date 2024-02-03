@@ -4,7 +4,7 @@ const talksData = [
     place: "AWS Commmunity Day, Kochi (Dec 2023)",
     description: "The final and upcoming talk for 2023. The organizers had mentioned that there is an empty slot for a talk when I had met them at KubeDay India.",
     video: "",
-    link: "",
+    link: "https://x.com/awsugkochi/status/1735963962280165437?s=20",
     type: "Talk",
     featured: true
   }, 
@@ -21,7 +21,7 @@ const talksData = [
     name: "Getting started with contributing to Kubernetes",
     place: "Cloud Native Day Pune (Oct 2023)",
     description: "I submitted the CFP for this talk once I was pretty active in the Kubernetes open source ecosystem. The v1.29 release cycle was going on and I was a shadow in the enhancements team. I was able to meet a lot of talented folks who were speaking at the event and had wonderful discussions with them regarding platform engineering and devops.",
-    video: "",
+    video: "https://youtu.be/a-YwCzTEotg",
     type: "Talk",
     featured: true
   },
@@ -29,7 +29,7 @@ const talksData = [
     name: "Adventures in building our own PaaS",
     place: "DevOpsDays Bengaluru (Oct 2023)",
     description: "After my experience with DevOpsDays in the previous year, I was really excited for DevOpsDays Bengaluru. I caught up with a bunch of friends and made new ones. This time around too I gave a lightning talk about what we've been building with neetoDeploy over the past year. It was a nice to look back at the talk I had given last year and how much we've come since then.",
-    video: "",
+    video: "https://www.youtube.com/watch?v=-2PEY1CUKFo",
     type: "Talk",
     featured: true
   },
