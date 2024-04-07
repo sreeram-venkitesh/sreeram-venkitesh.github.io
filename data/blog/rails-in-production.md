@@ -1,7 +1,7 @@
 ---
 title: "Rails in Production"
 summary: "An end-to-end devops guide for your Ruby on Rails projects"
-tags: ["ruby-on-rails","software-engineering","devops","series"]
+tags: ["ruby-on-rails","software-engineering","devops"]
 draft: false
 date: "2022-03-02"
 ---

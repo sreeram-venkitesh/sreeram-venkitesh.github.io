@@ -94,12 +94,12 @@ export default function Home({ posts }) {
           {/* Most recent 10 posts */}
           <div className='space-y-3'>            
             <p className='text-lg leading-7 font-semibold'>Recent posts</p>
-            <table className='px-10 leading-8'>
+            <table className='px-10 w-full leading-8'>
               <tbody>
               {
                 posts.slice(0,10).map(item => (
                 <tr className='w-full text-xs md:text-lg'>
-                  <td className='w-1/6 text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date)}</a></td>
+                  <td width="15%" className='text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date)}</a></td>
                   <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
                 </tr>
                 ))
@@ -108,17 +108,15 @@ export default function Home({ posts }) {
             </table>
           </div>
 
-         
-
-          {/* Rails Devops */}
+          {/* Personal Favourites */}
           <div className='space-y-3'>            
             <p className='text-lg leading-7 font-semibold'>Personal Favourites</p>
-            <table className='px-10 leading-8'>
+            <table className='px-10 w-full leading-8'>
               <tbody>
               {
                 posts.filter(item => item.tags.includes('favourite')).slice(0,10).map(item => (
                 <tr className='w-full text-xs md:text-lg'>
-                  <td className='w-1/6 text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date, false)}</a></td>
+                  <td width="15%" className='text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date, false)}</a></td>
                   <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
                 </tr>
                 ))
@@ -126,25 +124,23 @@ export default function Home({ posts }) {
               </tbody>
             </table>
           </div>
-
+          
           {/* Rails Devops */}
           <div className='space-y-3'>            
             <p className='text-lg leading-7 font-semibold'>Devops for Ruby on Rails</p>
-            <table className='px-10 leading-8'>
+            <table className='px-10 w-full leading-8'>
               <tbody>
               {
                 posts.filter(item => item.tags.includes('devops') && item.tags.includes('ruby-on-rails')).slice(0,10).map(item => (
                 <tr className='w-full text-xs md:text-lg'>
-                  <td className='w-1/6 text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date, false)}</a></td>
+                  <td width="15%" className='text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date, false)}</a></td>
                   <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
                 </tr>
                 ))
               }
               </tbody>
             </table>
-          </div>
-
-
+          </div> 
           
           </div>
         </div>

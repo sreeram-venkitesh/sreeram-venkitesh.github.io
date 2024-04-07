@@ -1,5 +1,20 @@
 const talksData = [
   {
+    name: "Last Week In Kubernetes Development Newsletter",
+    place: "Kubernetes Contributor Summit, KubeCon EU, Paris (Mar 2024)",
+    description: "Gave a mini talk at the Contributor Summit event about the LWKD newsletter.",
+    type: "Talk",
+    featured: true
+  },
+  {
+    name: "Understanding Kubernetes internals by running a cluster from scratch",
+    place: "Kubernetes Community Days Kerala (Feb 2024)",
+    description: "This was my first time doing a live demo on stage. It was fun.",
+    video: "https://www.youtube.com/watch?v=WLaW8Sc6FjU",
+    type: "Talk",
+    featured: true
+  }, 
+  {
     name: "How we built neetoDeploy, our PaaS deployment service using Kubernetes on Amazon EKS",
     place: "AWS Commmunity Day, Kochi (Dec 2023)",
     description: "The final and upcoming talk for 2023. The organizers had mentioned that there is an empty slot for a talk when I had met them at KubeDay India.",

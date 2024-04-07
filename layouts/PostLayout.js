@@ -98,13 +98,8 @@ export default function PostLayout({
               }
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
-              <div className="pt-10 text-justify pb-8 prose dark:prose-dark max-w-none xl:px-36">
+              <div className="pt-10 text-justify pb-8 prose font-medium dark:prose-dark max-w-none xl:px-36">
                 {children}
-              </div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
-                  {"Discuss on Twitter"}
-                </Link>
               </div>
               <Comments frontMatter={frontMatter} />
             </div>

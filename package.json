@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "tinacms build && cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
-    "dev": "tinacms dev -c \"next dev\"",
+    "dev": "next dev",
     "build": "tinacms build && next build && node ./scripts/generate-sitemap",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
