@@ -1,5 +1,22 @@
 const talksData = [
   {
+    name: "The Two Sides of the Kubernetes Enhancement Proposals",
+    place: "KubeCon + CloudNativeCon China 2024, Hong Kong",
+    description: "Spoke about the work done by the release team and the enhancements subproject of SIG Architecture along with Rayan. My talk at KubeCon!",
+    type: "Talk",
+    video: "https://www.youtube.com/watch?v=qVl0lJynTLI&list=PLj6h78yzYM2NcAGHRxgBHY8x3QTfnZQCv&index=126",
+    link: "https://events.linuxfoundation.org/kubecon-cloudnativecon-open-source-summit-ai-dev-china/",
+    featured: true
+  }, 
+  {
+    name: "Climbing the ladders of the Kubernetes contributor community",
+    place: "KuberTENes Birthday Bash, Kerala (June 2024)",
+    description: "Talked about the various ways in which new contributors can get involved in the Kubernetes community at the local KuberTENes event.",
+    type: "Talk",
+    link: "https://community.cncf.io/events/details/cncf-cloud-native-kerala-presents-kubertenes-birthday-bash-kerala/",
+    featured: false
+  },
+  {
     name: "Last Week In Kubernetes Development Newsletter",
     place: "Kubernetes Contributor Summit, KubeCon EU, Paris (Mar 2024)",
     description: "Gave a mini talk at the Contributor Summit event about the LWKD newsletter.",
@@ -21,7 +38,7 @@ const talksData = [
     video: "",
     link: "https://x.com/awsugkochi/status/1735963962280165437?s=20",
     type: "Talk",
-    featured: true
+    featured: false
   }, 
   {
     name: "Scaling neetoDeploy from zero to production - Building, maintaining and optimizing our cloud deployment platform",
@@ -30,7 +47,7 @@ const talksData = [
     video: "https://hasgeek.com/rootconf/sreconf-2023/sub/scaling-neetodeploy-from-zero-to-production-buildi-RzAuZKcmqZunJSoHnH4Ufy",
     link: "https://hasgeek.com/rootconf/sreconf-2023/sub/scaling-neetodeploy-from-zero-to-production-buildi-RzAuZKcmqZunJSoHnH4Ufy",
     type: "Talk",
-    featured: true
+    featured: false
   },
   {
     name: "Getting started with contributing to Kubernetes",
@@ -38,7 +55,7 @@ const talksData = [
     description: "I submitted the CFP for this talk once I was pretty active in the Kubernetes open source ecosystem. The v1.29 release cycle was going on and I was a shadow in the enhancements team. I was able to meet a lot of talented folks who were speaking at the event and had wonderful discussions with them regarding platform engineering and devops.",
     video: "https://youtu.be/a-YwCzTEotg",
     type: "Talk",
-    featured: true
+    featured: false
   },
   {
     name: "Adventures in building our own PaaS",
@@ -46,7 +63,7 @@ const talksData = [
     description: "After my experience with DevOpsDays in the previous year, I was really excited for DevOpsDays Bengaluru. I caught up with a bunch of friends and made new ones. This time around too I gave a lightning talk about what we've been building with neetoDeploy over the past year. It was a nice to look back at the talk I had given last year and how much we've come since then.",
     video: "https://www.youtube.com/watch?v=-2PEY1CUKFo",
     type: "Talk",
-    featured: true
+    featured: false
   },
   {
     name: "Building a Heroku alternative on Kubernetes",
@@ -54,7 +71,7 @@ const talksData = [
     description: "DevOpsDays India was one of the biggest devops conferences I've been to till this point. I was able to meet a lot of folks in this space in person as well. On the second day, I was able to give a lightning talk about how are building neetoDeploy. This was my first time talking on stage at an actual conference.",
     video: "https://www.youtube.com/watch?v=V0G_9OJmISI&list=PLbgP71NCXCqHAfztq9uRBd26KJ5V5N8v6&index=17",
     type: "Talk",
-    featured: true
+    featured: false
   },
   {
     name: 'Introduction to Emulation Development',
@@ -72,7 +89,7 @@ const talksData = [
     video: "https://www.youtube.com/watch?v=E3ngQLHRGKs",
     type: "Talk",
     link: "",
-    featured: true,
+    featured: false,
   },
   {
     name: "Lightning Talk about my journey with YouTube",
@@ -80,7 +97,7 @@ const talksData = [
     place: "MEC.Conf (Oct 2019)",
     type: "Talk",
     video: "https://www.youtube.com/watch?v=0rowYN-IXHY",
-    featured: true,
+    featured: false,
   },
   // {
   //   name: "Using Deta, a cloud for the next billion ideas",
