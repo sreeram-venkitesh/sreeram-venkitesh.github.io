@@ -11,7 +11,10 @@ const TalkCard = ({
   type,
   featured = false,
 }) => (
-  <div className="py-5 px-4 w-full">
+  <div className={`py-5 px-6 relative w-full rounded-xl ${featured ? 'bg-violet-50 mb-2' : ''}`}>
+    {featured && (
+      <span className="absolute top-5 right-5 text-xl">🌠</span>
+    )}
     <div className="h-full overflow-hidden">
       {/* {href ? (
         <Link href={href} aria-label={`Link to ${title}`}>

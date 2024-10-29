@@ -8,8 +8,6 @@ import formatDate from '@/lib/utils/formatDate'
 import NewsletterForm from '@/components/NewsletterForm'
 import { $0 } from 'prettier'
 
-const MAX_DISPLAY = 5
-
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
 
@@ -17,57 +15,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-
-
-  console.log(posts)
-
-  const personalFavs = [
-    {
-      title: "What it means to be good at your software engineering job",
-      link: "/blog/getting-better-at-your-job" ,
-      "date": "Mar 2022"
-    },
-    {
-      title: "Errors, the architect of life",
-      link: "/blog/errors",
-      date: "Jan 2019"
-    },
-    {
-      title: "How I manage my bookmarks productively",
-      link: "/blog/bookmarks",
-      date: "Dec 2021"
-    },
-    // {
-    //   title: " Building frameworks of thought",
-    //   link: "/blog/frameworks-of-thought",
-    //   date: ""
-    // },
-    {
-      title: "Tips for finding yourself a good software job",
-      link: "/blog/finding-software-job",
-      date: "July 2021"
-    },
-  ]
-
-  const railsDevops = [
-    {
-      title: "Rails in Production",
-      link: "/blog/rails-in-production",
-    },
-    {
-      title: "Different ways to deploy your Rails application",
-      link: "/blog/devops/introduction-to-rails-in-production"
-    },
-    {
-      title: "Initial server setup with Ubuntu 20.04 for deploying your Rails project",
-      link: "/blog/devops/server-setup"
-    },
-    {
-      title: "How to deploy your Rails app using Capistrano",
-      link: "blog/devops/rails-capistrano"
-    },
-  ]
-
   const formatDate = (date, isDayPresent = true) => {
     const options = { year: 'numeric', month: 'short' };
     if(isDayPresent){
@@ -145,11 +92,11 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
-      {/* {siteMetadata.newsletter.provider !== '' && (
+      {siteMetadata.newsletter.provider !== '' && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
-      )} */}
+      )}
     </>
   )
 }
