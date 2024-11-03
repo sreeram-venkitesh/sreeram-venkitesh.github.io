@@ -28,7 +28,7 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="space-y-5 md:space-y-8 text-zinc-800 dark:text-zinc-300" >
-        <div className="py-10 px-3 md:px-20 space-y-2 md:space-y-5">
+        <div className="py-5 md:py-10 px-3 md:px-20 space-y-2 md:space-y-5">
           <p className="text-lg mt-5 leading-7 text-justify">
             Hey 👋🏼 I'm Sreeram, a software developer from Kerala, India's beautiful west coast. This is my personal website, 
             where I share my notes about things I'm interested in.
@@ -45,7 +45,7 @@ export default function Home({ posts }) {
               <tbody>
               {
                 posts.slice(0,10).map(item => (
-                <tr className='w-full text-xs md:text-lg'>
+                <tr className='w-full text-lg'>
                   <td width="15%" className='text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date)}</a></td>
                   <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
                 </tr>
@@ -62,7 +62,7 @@ export default function Home({ posts }) {
               <tbody>
               {
                 posts.filter(item => item.tags.includes('favourite')).slice(0,10).map(item => (
-                <tr className='w-full text-xs md:text-lg'>
+                <tr className='w-full text-lg'>
                   <td width="15%" className='text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date, false)}</a></td>
                   <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
                 </tr>
@@ -79,7 +79,7 @@ export default function Home({ posts }) {
               <tbody>
               {
                 posts.filter(item => item.tags.includes('devops') && item.tags.includes('ruby-on-rails')).slice(0,10).map(item => (
-                <tr className='w-full text-xs md:text-lg'>
+                <tr className='w-full text-lg'>
                   <td width="15%" className='text-gray-400 align-text-top'><a href={"blog/" + item.slug}>{formatDate(item.date, false)}</a></td>
                   <td className='w-4/5 pl-3 md:pl-4 align-text-top'><a href={"blog/" + item.slug}>{item.title}</a></td>
                 </tr>

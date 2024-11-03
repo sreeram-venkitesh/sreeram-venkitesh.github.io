@@ -84,7 +84,7 @@ export default function PostLayout({
               )}
               { 
                 toc.length > 0 && 
-                <div className="my-3 px-10 w-1/2 border mx-auto border-gray-200 dark:border-gray-700 prose dark:prose-dark max-w-none text-center">
+                <div className="my-3 px-3 md:px-5 md:w-1/2 border mx-auto border-gray-200 dark:border-gray-700 prose dark:prose-dark max-w-none text-center">
                   <div className="flex items-center justify-center space-x-2">
                     <p className="font-bold">Contents</p>
                     <a onClick={() => setContents(!contents)}>[{contents ? "Hide" : "Show"}]</a>
@@ -98,7 +98,7 @@ export default function PostLayout({
               }
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
-              <div className="pt-10 text-justify pb-8 prose font-medium dark:prose-dark max-w-none xl:px-36">
+              <div className="pt-3 md:pt-5 text-justify pb-8 prose font-medium dark:prose-dark max-w-none xl:px-36">
                 {children}
               </div>
               <Comments frontMatter={frontMatter} />

@@ -67,23 +67,21 @@ export const TagSEO = ({ title, description }) => {
   )
 }
 
-export const BlogSEO = ({ authorDetails, title, summary, date, lastmod, url, images = [] }) => {
+export const BlogSEO = ({ authorDetails, title, tags, summary, date, lastmod, url, images = [] }) => {
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
-  let imagesArr =
-    images.length === 0
-      ? [siteMetadata.socialBanner]
-      : typeof images === 'string'
-      ? [images]
-      : images
 
-  const featuredImages = imagesArr.map((img) => {
-    return {
+  const ogImageUrl = `${siteMetadata.siteUrl}/api/og?title=${encodeURIComponent(title)}&tags=${encodeURIComponent(tags)}`
+
+
+  const featuredImages = [
+    {
       '@type': 'ImageObject',
-      url: `${siteMetadata.siteUrl}${img}`,
+      url: ogImageUrl,
     }
-  })
+  ]
+
 
   let authorList
   if (authorDetails) {

@@ -10,7 +10,7 @@ const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
-        <header className="flex items-center justify-between py-10">
+        <header className="flex items-center justify-between py-5 md:py-10">
           <div>
             <Link href="/" aria-label="Sreeram Venkitesh">
               <div className="flex items-center justify-between">
@@ -18,7 +18,7 @@ const LayoutWrapper = ({ children }) => {
                   <img style={{minWidth: 40}} width="40" src="/static/favicons/technologist.png" alt="Icon" />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-8 text-2xl text-transparent bg-clip-text bg-gradient-to-br from-violet-800 to-red-500 dark:from-violet-400 dark:to-red-500 font-semibold sm:block">
+                  <div className="h-8 text-2xl text-transparent bg-clip-text bg-gradient-to-br from-violet-800 to-red-500 dark:from-violet-400 dark:to-red-500 font-semibold sm:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (

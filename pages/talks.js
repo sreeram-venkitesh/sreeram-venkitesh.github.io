@@ -30,6 +30,7 @@ export default function Talks() {
                   type={d.type}
                   link={d.link}
                   video={d.video}
+                  date={d.date}
                   featured={d.featured}
                 />
               ))}

@@ -14,20 +14,20 @@ export default function AuthorLayout({ children, frontMatter }) {
             About Me
           </h1>
         </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-4 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center pt-8 space-x-2 xl:col-span-2">
+        <div className="items-start space-y-2 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-y-0">
+          <div className="flex flex-col items-center pt-8 space-x-2 lg:col-span-2">
             <Image
               src={avatar}
               alt="avatar"
               width="426px"
               height="600px"
-              className="my-auto hidden md:block"
+              className="my-auto hidden rounded md:block"
             />
             {/* <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3> */}
             {/* <div className="text-gray-500 dark:text-gray-400">{occupation}</div> */}
             {/* <div className="text-gray-500 dark:text-gray-400">{company}</div> */}
           </div>
-          <div className="pt-8 pb-8 text-gray-800 prose dark:prose-dark max-w-none xl:col-span-2 text-justify">{children}</div>
+          <div className="pt-8 pb-8 text-gray-800 prose dark:prose-dark max-w-none lg:col-span-2 text-justify">{children}</div>
         </div>
       </div>
     </>
