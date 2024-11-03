@@ -9,11 +9,15 @@ const TalkCard = ({
   video,
   link,
   type,
+  date,
   featured = false,
 }) => (
-  <div className={`py-5 px-6 relative w-full rounded-xl ${featured ? 'bg-violet-50 mb-2' : ''}`}>
+  <div className={`py-5 px-6 relative w-full rounded-xl ${featured ? 'bg-violet-50 mb-2' : ''} ${new Date(date) > new Date() ? 'border-red-200 border border-dotted mb-2' : ''}`}>
     {featured && (
-      <span className="absolute top-5 right-5 text-xl">🌠</span>
+      <span className="absolute top-5 right-5 text-xl">📌</span>
+    )}
+    {new Date(date) > new Date() && (
+      <span className="absolute top-5 right-5 text-md text-red-600">Upcoming!</span>
     )}
     <div className="h-full overflow-hidden">
       {/* {href ? (

@@ -19,9 +19,9 @@ export default function AuthorLayout({ children, frontMatter }) {
             <Image
               src={avatar}
               alt="avatar"
-              width="512px"
-              height="341px"
-              className="my-auto"
+              width="426px"
+              height="600px"
+              className="my-auto hidden md:block"
             />
             {/* <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3> */}
             {/* <div className="text-gray-500 dark:text-gray-400">{occupation}</div> */}

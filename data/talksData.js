@@ -1,11 +1,30 @@
 const talksData = [
   {
+    name: "The Hitchhiker's Guide to Testing Kubernetes",
+    place: "Kubernetes Maintainer Summit, KubeCon India 2024, Delhi",
+    description: "Everything you'd ever need to know about running tests in the Kubernetes code base. This talk was something that I wanted for myself \
+    when I started contributing to Kubernetes and had to figure out how to run all the different types of tests and how to add new test cases.",
+    type: "Talk",
+    video: "",
+    link: "https://maintainersummitindia2024.sched.com/event/1odWg/the-hitchhikers-guide-to-testing-kubernetes-sreeram-venkitesh-sig-testing",
+    featured: false,
+    date: "2024-12-10"
+  }, 
+  {
+    name: "An Accelerated Introduction to AI Model Deployment with Cloud Native",
+    place: "KubeCon + CloudNativeCon India 2024, Delhi",
+    description: "A tutorial along with Emily on how to build and run AI models with the help of cloud native technology like Kubernetes.",
+    type: "Talk",
+    link: "https://sched.co/1mVSj",
+    date: "2024-12-12"
+  }, 
+  {
     name: "The Two Sides of the Kubernetes Enhancement Proposals",
     place: "KubeCon + CloudNativeCon China 2024, Hong Kong",
     description: "Spoke about the work done by the release team and the enhancements subproject of SIG Architecture along with Rayan. My talk at KubeCon!",
     type: "Talk",
     video: "https://www.youtube.com/watch?v=qVl0lJynTLI&list=PLj6h78yzYM2NcAGHRxgBHY8x3QTfnZQCv&index=126",
-    link: "https://events.linuxfoundation.org/kubecon-cloudnativecon-open-source-summit-ai-dev-china/",
+    link: "https://kccncossaidevchn2024.sched.com/event/1eYZh",
     featured: true
   }, 
   {
