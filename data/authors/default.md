@@ -4,9 +4,9 @@ avatar: /static/images/sreeram_talk_kubecon.jpeg
 occupation: Software Engineer
 company: BigBinary
 email: sreeramvenkitesh@gmail.com
-twitter: https://twitter.com/fillerInk
+twitter: https://twitter.com/sreeramvnkitesh
 linkedin: https://www.linkedin.com/in/sreeram-venkitesh
-github: https://github.com/fillerInk
+github: https://github.com/sreeram-venkitesh
 ---
 
 I'm a 25 year old who is passionate about the craft of building software. I like to [build cool shit](/projects) and to [talk](/talks) about the things I've learnt. Previously I used to work as a Software Engineer at [BigBinary](https://bigbinary.com) where I was building [NeetoDeploy](https://neeto.com/neetodeploy), a platform as a service for deploying your apps on the cloud. Currently I'm on a learning break. 

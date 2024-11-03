@@ -12,7 +12,7 @@ const siteMetadata = {
   socialBanner: '/static/images/banner.png',
   email: 'sreeramvenkitesh@gmail.com',
   github: 'https://github.com/sreeram-venkitesh',
-  twitter: 'https://twitter.com/fillerInk',
+  twitter: 'https://twitter.com/sreeramvnkitesh',
   youtube: 'https://youtube.com/c/sreeramvenkitesh',
   linkedin: 'https://www.linkedin.com/in/sreeramvenkitesh',
   locale: 'en-US',
