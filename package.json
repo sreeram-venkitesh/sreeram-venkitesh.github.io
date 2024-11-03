@@ -3,9 +3,9 @@
   "version": "1.4.0",
   "private": true,
   "scripts": {
-    "start": "tinacms build && cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
+    "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
-    "build": "tinacms build && next build && node ./scripts/generate-sitemap",
+    "build": "next build && node ./scripts/generate-sitemap",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
