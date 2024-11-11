@@ -90,6 +90,33 @@ module.exports = {
               color: theme('colors.gray.900'),
               borderLeftColor: theme('colors.gray.200'),
             },
+            ".callout": {
+              paddingTop: '15px',
+              paddingBottom: '15px',
+              paddingRight: '5px',
+              borderLeftColor: theme('colors.blue.300'),
+              backgroundColor: theme('colors.blue.100')
+            },
+            ".callout h2": {
+              margin: "5px",
+              fontStyle: "normal"
+            },
+            ".callout p": {
+              margin: "3px",
+              marginTop: "15px",
+              marginBottom: "15px",
+              fontStyle: "normal",
+              whitespace: "no-wrap"
+            },
+            ".callout p::before": {
+              content: "none"
+            },
+            ".callout p::after": {
+              content: "none"
+            },
+            ".callout code": {
+              backgroundColor: theme('colors.blue.200'),
+            },
           },
         },
         dark: {

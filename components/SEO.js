@@ -121,7 +121,7 @@ export const BlogSEO = ({ authorDetails, title, tags, summary, date, lastmod, ur
     description: summary,
   }
 
-  const twImageUrl = featuredImages[0].url
+  // const twImageUrl = featuredImages[0].url
 
   return (
     <>
@@ -130,7 +130,7 @@ export const BlogSEO = ({ authorDetails, title, tags, summary, date, lastmod, ur
         description={summary}
         ogType="article"
         ogImage={featuredImages}
-        twImage={twImageUrl}
+        twImage={featuredImages}
       />
       <Head>
         {date && <meta property="article:published_time" content={publishedAt} />}
