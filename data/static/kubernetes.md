@@ -73,6 +73,7 @@ I've been involved with the Kuberentes and CNCF open source ecosystem for over 2
 
 - Got [my PR](https://github.com/kubernetes/kubernetes/pull/127094) for adding zero sleep duration to Pod Lifecycle's Sleep Action merged.
 - Got [my PR](https://github.com/kubernetes/kubernetes/pull/128186) for implementing version skew for [InPlacePodVerticalScaling](https://github.com/kubernetes/enhancements/issues/1287) feature's beta graduation merged.
+- Recieved the Contributor Award at the Kubernetes Contributor Summit NA 2024 held at Salt Lake City, Utah along with KubeCon + CloudNativeCon NA. (Big thanks to Priyanka, Josh, Kaslin and Chris! This wouldn't have been possible without your support!)
 
 
 ## 2023
