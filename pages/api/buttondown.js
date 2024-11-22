@@ -1,8 +1,11 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   const { email } = req.body
-  if (!email) {
-    return res.status(400).json({ error: 'Email is required' })
+
+  // Improved email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!email || !emailRegex.test(email)) {
+    return res.status(400).json({ error: 'Please include a valid email' })
   }
 
   try {
@@ -18,11 +21,11 @@ export default async (req, res) => {
       },
       method: 'POST',
     })
-
+    
     if (response.status >= 400) {
       return res.status(500).json({ error: `There was an error subscribing to the list.` })
     }
-
+    
     return res.status(201).json({ error: '' })
   } catch (error) {
     return res.status(500).json({ error: error.message || error.toString() })

@@ -3,12 +3,6 @@ title: Kubernetes Contributions Resume
 tags: []
 ---
 
-<blockquote class="callout">
-  <h2>Hi from KubeCon!</h2>
-  <p>If you're here, you're probably attending KubeCon NA at Salt Lake City right now! Hope you're having a great time at the conference!</p>
-  <p>I'm currently in between jobs and I'm looking for new opportunities which are closely aligned with Kubernetes, the CNCF ecosystem and open source. I've been contributing to Kubernetes for the past two years and I'm gaining more momentum these days. You can find my full resume [here](/sreeram-venkitesh-resume.pdf).</p>
-  <p> Please feel free to email me at `sreeram [at] hey [dot] com` if you think I can bring more value to your organization! Thanks! </p>
-</blockquote>
 
 I've been involved with the Kuberentes and CNCF open source ecosystem for over 2 years now. This page serves as a running log for all my upstream contributions. This is inspired by [Priyanka Saggu's Kubernetes contributions page](https://www.psaggu.com/kubernetes.html). If you want to start reading from the beginning, click [here](#2022)
 
@@ -18,7 +12,7 @@ I've been involved with the Kuberentes and CNCF open source ecosystem for over 2
 - Writing [LWKD](https://lwkd.info), reporting PRs merged into kubernetes/kubernetes every week.
 - Working on [KEP 4818: Allow zero value for Sleep Action of PreStop Hook](https://github.com/kubernetes/enhancements/issues/4818) for v1.32.
 - Working on [KEP 4595: CEL for CRD AdditionalPrinterColumns](https://github.com/kubernetes/enhancements/issues/4595) with Priyanka.
-- Learning about container stop signals for [KEP 4960: Container Stop Signals](https://github.com/kubernetes/enhancements/issues/4960).
+- Learning about container stop signals and the container runtime interface for [KEP 4960: Container Stop Signals](https://github.com/kubernetes/enhancements/issues/4960).
 
 ## 2024
 

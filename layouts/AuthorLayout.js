@@ -19,8 +19,8 @@ export default function AuthorLayout({ children, frontMatter }) {
             <Image
               src={avatar}
               alt="avatar"
-              width="426px"
-              height="600px"
+              width={426}
+              height={600}
               className="my-auto hidden rounded md:block"
             />
             {/* <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3> */}
