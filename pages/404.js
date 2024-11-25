@@ -15,7 +15,6 @@ export default function FourZeroFour() {
         Sorry we couldn't find this page.
       </p>
       </div>
-      
     </div>
   );
 }

@@ -21,7 +21,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter', buttondownUsern
         }}
       >
         <div>
-          <label className="sr-only text-sm" htmlFor="bd-email">
+          <label className="sr-only text-sm " htmlFor="bd-email">
             Email address
           </label>
           <input

@@ -55,7 +55,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
-              color: theme('colors.pink.500'),
+              // color: theme('colors.pink.500'),
               backgroundColor: theme('colors.gray.100'),
               paddingLeft: '4px',
               paddingRight: '4px',
@@ -89,6 +89,13 @@ module.exports = {
             blockquote: {
               color: theme('colors.gray.900'),
               borderLeftColor: theme('colors.gray.200'),
+              fontStyle: "normal"
+            },
+            'blockquote p::before': {
+              content: 'none',
+            },
+            'blockquote p::after': {
+              content: 'none',
             },
             ".callout": {
               paddingTop: '15px',

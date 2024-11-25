@@ -1,0 +1,60 @@
+---
+title: "Building and running Kubernetes with kind"
+summary: "My local Kubernetes development setup"
+tags: ["kubernetes","kubernetes-dev","open source"]
+draft: false
+date: "2024-11-22"
+---
+
+I use [kind](https://kind.sigs.k8s.io/) a lot to spin up Kubernetes clusters locally. Kind also lets you compile the Kubernetes source code into node images that you use to run clusters with. This is what I do to quickly build and test changes to the Kubernetes source code.
+
+<blockquote>
+Note: You can also use the [`hack/local-up-cluster.sh` script](https://github.com/kubernetes/kubernetes/blob/master/hack/local-up-cluster.sh) to spin up a Kubernetes cluster from source. local-up-cluster [only works in Linux environments](https://github.com/kubernetes/kubernetes/issues/94164#issuecomment-678471821) and is not supported for MacOS however.
+</blockquote>
+
+### Installing kind
+
+I'm installing kind on my Mac with brew.
+
+```bash
+brew install kind
+```
+
+Once you've installed kind, you can quickly spin up clusters in your machine. Each node of your cluster would be running as a docker container in your machine.
+
+```bash
+kind create cluster --name test-cluster
+```
+
+### Building your node image from source
+
+You can clone [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) and run the following from inside the repository to build the source code into a kind node image which you can use to create clusters.
+
+```bash
+kind build node-image --arch arm64 .
+```
+
+I'm passing the arch flag as `arm64` since I'm using an M1 MacBook Pro. Also note that I'm passing the path to the kubernetes source code as an argument here. Since we're running the command from inside the cloned repository, this is the `.` directory.
+
+### kind cluster config
+
+Once the above command finishes running, you can see that a new container image `kindest/node:latest` will be created in your machine. This is the source code compiled into a container image. You can use the node image directly with `kind create cluster` or you can setup your cluster with a configuration file. The kind config file lets you configure things like feature gates for different each components, set values for different flags and so on.
+
+Here's an example config file for a cluster with 3 worker nodes and the `PodLifecycleSleepActionAllowZero` feature gate turned on:
+
+```yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: sleep-cluster
+featureGates:
+  PodLifecycleSleepActionAllowZero: true
+nodes:
+- role: control-plane
+  image: kindest/node:latest
+- role: worker
+  image: kindest/node:latest
+- role: worker
+  image: kindest/node:latest
+- role: worker
+  image: kindest/node:latest
+```

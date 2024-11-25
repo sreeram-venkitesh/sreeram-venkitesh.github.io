@@ -39,6 +39,7 @@ spec:
 Once you apply this ReplicaSet to your cluster, you'll have 3 Pods running with the nginx image. Now if you manually create a 4th nginx Pod with the same label of `app: nginx`, the ReplicaSet's current count will be 4 instead of 3. The ReplicaSet controller will then delete the newly created Pod to bring down the total count to 3 as well.
 
 You can create the 4th Pod manually with the following manifest:
+
 ```yaml
 apiVersion: v1
 kind: Pod
