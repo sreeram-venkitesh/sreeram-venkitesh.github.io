@@ -2,7 +2,14 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js'],
+  content: [
+    './node_modules/pliny/**/*.js',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,tsx}',
+    './components/**/*.{js,ts,tsx}',
+    './layouts/**/*.{js,ts,tsx}',
+    './data/**/*.mdx',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -21,7 +28,7 @@ module.exports = {
       colors: {
         primary: colors.indigo,
         gray: colors.neutral,
-        darkbg: "#22272E"
+        darkbg: '#22272E',
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -89,7 +96,7 @@ module.exports = {
             blockquote: {
               color: theme('colors.gray.900'),
               borderLeftColor: theme('colors.gray.200'),
-              fontStyle: "normal"
+              fontStyle: 'normal',
             },
             'blockquote p::before': {
               content: 'none',
@@ -97,31 +104,31 @@ module.exports = {
             'blockquote p::after': {
               content: 'none',
             },
-            ".callout": {
+            '.callout': {
               paddingTop: '15px',
               paddingBottom: '15px',
               paddingRight: '5px',
               borderLeftColor: theme('colors.blue.300'),
-              backgroundColor: theme('colors.blue.100')
+              backgroundColor: theme('colors.blue.100'),
             },
-            ".callout h2": {
-              margin: "5px",
-              fontStyle: "normal"
+            '.callout h2': {
+              margin: '5px',
+              fontStyle: 'normal',
             },
-            ".callout p": {
-              margin: "3px",
-              marginTop: "15px",
-              marginBottom: "15px",
-              fontStyle: "normal",
-              whitespace: "no-wrap"
+            '.callout p': {
+              margin: '3px',
+              marginTop: '15px',
+              marginBottom: '15px',
+              fontStyle: 'normal',
+              whitespace: 'no-wrap',
             },
-            ".callout p::before": {
-              content: "none"
+            '.callout p::before': {
+              content: 'none',
             },
-            ".callout p::after": {
-              content: "none"
+            '.callout p::after': {
+              content: 'none',
             },
-            ".callout code": {
+            '.callout code': {
               backgroundColor: theme('colors.blue.200'),
             },
           },

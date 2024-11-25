@@ -1,3 +1,5 @@
+const { withContentlayer } = require('next-contentlayer2')
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -43,7 +45,7 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
   {
     key: 'Strict-Transport-Security',
-    value: 'max-age=31536000; includeSubDomains; preload',
+    value: 'max-age=31536000; includeSubDomains',
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
   {
@@ -52,49 +54,47 @@ const securityHeaders = [
   },
 ]
 
-module.exports = withBundleAnalyzer({
-  reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  eslint: {
-    dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
-  },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: securityHeaders,
-      },
-    ]
-  },
-  webpack: (config, { dev, isServer }) => {
-    config.module.rules.push({
-      test: /\.(png|jpe?g|gif|mp4)$/i,
-      use: [
+const output = process.env.EXPORT ? 'export' : undefined
+const basePath = process.env.BASE_PATH || undefined
+const unoptimized = process.env.UNOPTIMIZED ? true : undefined
+
+/**
+ * @type {import('next/dist/next-server/server/config').NextConfig}
+ **/
+module.exports = () => {
+  const plugins = [withContentlayer, withBundleAnalyzer]
+  return plugins.reduce((acc, next) => next(acc), {
+    output,
+    basePath,
+    reactStrictMode: true,
+    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+    eslint: {
+      dirs: ['app', 'components', 'layouts', 'scripts'],
+    },
+    images: {
+      remotePatterns: [
         {
-          loader: 'file-loader',
-          options: {
-            publicPath: '/_next',
-            name: 'static/media/[name].[hash].[ext]',
-          },
+          protocol: 'https',
+          hostname: 'picsum.photos',
         },
       ],
-    })
-
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
-
-    if (!dev && !isServer) {
-      // Replace React with Preact only in client production build
-      Object.assign(config.resolve.alias, {
-        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
+      unoptimized,
+    },
+    async headers() {
+      return [
+        {
+          source: '/(.*)',
+          headers: securityHeaders,
+        },
+      ]
+    },
+    webpack: (config, options) => {
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       })
-    }
 
-    return config
-  },
-})
+      return config
+    },
+  })
+}
