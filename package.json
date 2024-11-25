@@ -1,7 +1,10 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
+  "name": "sreeram-venkitesh.github.io",
   "version": "2.3.0",
   "private": true,
+  "engines": {
+    "node": "18"
+  },
   "scripts": {
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
