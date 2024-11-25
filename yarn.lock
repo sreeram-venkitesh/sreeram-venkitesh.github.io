@@ -84,7 +84,7 @@
     "@algolia/requester-fetch" "5.15.0"
     "@algolia/requester-node-http" "5.15.0"
 
-"@algolia/client-search@5.15.0":
+"@algolia/client-search@5.15.0", "@algolia/client-search@^5.15.0":
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/@algolia/client-search/-/client-search-5.15.0.tgz#8645f5bc87a959b8008e021d8b31d55a47920b94"
   integrity sha512-Z32gEMrRRpEta5UqVQA612sLdoqY3AovvUPClDfMxYrbdDAebmGDVPtSogUba1FZ4pP5dx20D3OV3reogLKsRA==
@@ -2588,7 +2588,7 @@ ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-algoliasearch@^5.12.0:
+algoliasearch@^5.12.0, algoliasearch@^5.15.0:
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/algoliasearch/-/algoliasearch-5.15.0.tgz#09cef5a2555c4554b37a99f0488ea6ab2347e625"
   integrity sha512-Yf3Swz1s63hjvBVZ/9f2P1Uu48GjmjCN+Esxb6MAONMGtZB1fRX8/S1AhUTtsuTlcGovbYLxpHgc7wEzstDZBw==
