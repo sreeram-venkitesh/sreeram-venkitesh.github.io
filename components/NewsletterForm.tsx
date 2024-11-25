@@ -26,7 +26,7 @@ const NewsletterForm = ({
         }}
       >
         <div>
-          <label className="sr-only text-sm " htmlFor="bd-email">
+          <label className="sr-only text-sm" htmlFor="bd-email">
             Email address
           </label>
           <input
