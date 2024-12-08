@@ -77,6 +77,28 @@ export default function Home({ posts }) {
               </table>
             </div>
 
+            {/* Kubernetes Dev */}
+            <div className="space-y-3">
+              <p className="text-lg font-semibold leading-7">Kubernetes Development</p>
+              <table className="w-full px-10 leading-8">
+                <tbody>
+                  {posts
+                    .filter((item) => item.tags.includes('kubernetes-dev'))
+                    .slice(0, 10)
+                    .map((item) => (
+                      <tr className="w-full text-lg" key={item.slug}>
+                        <td width="15%" className="align-text-top text-gray-400">
+                          <a href={'blog/' + item.slug}>{formatDate(item.date, false)}</a>
+                        </td>
+                        <td className="w-4/5 pl-3 align-text-top md:pl-4">
+                          <a href={'blog/' + item.slug}>{item.title}</a>
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+
             {/* Rails Devops */}
             <div className="space-y-3">
               <p className="text-lg font-semibold leading-7">Devops for Ruby on Rails</p>
